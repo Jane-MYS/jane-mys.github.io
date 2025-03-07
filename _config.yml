@@ -8,20 +8,20 @@ version: 2
 # Personal info
 name: Mengyi Shi
 title: Tutoring Coordinator - Modern Languages
-email: brett.h@email.co.uk
-website: www.github.com/sproogen/resume-theme
+email: mengyishi9@gmail.com
+website: jane-mys.github.io
 
 # Dark Mode (true/false/never)
 darkmode: false
 
 # Social links
-github_username:  sproogen
+github_username:  
 # stackoverflow_username: "00000001"
 # dribbble_username: jekyll
 # facebook_username: jekyll
 # flickr_username: jekyll
-instagram_username: jameswgrant
-linkedin_username: jameswgrant
+
+linkedin_username: 
 # xing_username: jekyll
 # pinterest_username: jekyll
 youtube_username: globalmtb
