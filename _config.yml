@@ -1,27 +1,27 @@
 # Site
-repository: sproogen/resume-theme
+repository: jane-mys.github.io
 favicon: images/favicon.ico
 
 # Content configuration version
 version: 2
 
 # Personal info
-name: Mengyi Shi
-title: Tutoring Coordinator - Modern Languages
+name: Jane (Mengyi) Shi
+title: Education Leader & Project Manager
 email: mengyishi9@gmail.com
 website: jane-mys.github.io
 
 # Dark Mode (true/false/never)
-darkmode: false
+darkmode: true
 
 # Social links
-github_username:  
+github_username: Jane-MYS
+linkedin_username: jane-shi-m-a-pmp-46a418153
 # stackoverflow_username: "00000001"
 # dribbble_username: jekyll
 # facebook_username: jekyll
 # flickr_username: jekyll
-
-linkedin_username: 
+# instagram_username: jameswgrant
 # xing_username: jekyll
 # pinterest_username: jekyll
 youtube_username: globalmtb
@@ -44,70 +44,100 @@ additional_links:
 # google_analytics: "UA-00000000-0"
 
 # About Section
-# about_title: About Me
+about_title: Empowering Learning Through Innovation
 about_profile_image: images/profile.jpg
-about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Jane and I am currently working as a coordinator and program specialist. With my transferable skills, I believe I am equipped with the experience and qualifications of a program/project manager. 
+about_content: |
+  I'm an Ed.D. candidate at Northeastern University and a Program Coordinator at Santa Monica College, where I lead tutoring programs for over 35 student workers each semester.
+
+  My work spans across educational leadership, EdTech implementation, and volunteer project management. I've developed virtual platforms for tutoring, founded TransferBot – an AI-powered chatbot for California transfer students – and created apps and sites to help people make smarter financial and educational decisions.
+
+  I hold a PMP certification, and I'm passionate about optimizing workflows, mentoring student success, and expanding access to learning, both in person and online.
 
 content:
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
+  - title: Experience
+    layout: list
+    content:
+      - layout: left
+        title: Education Leadership
+        sub_title: Santa Monica College
+        caption: Program Coordinator
+        description: |
+          - Scaled tutoring across all modern languages
+          - Supervised 35+ tutors per term
+          - Developed online learning platform with 2,000+ users
+
+      - layout: left
+        title: EdTech & Project Management
+        sub_title: TransferBot
+        caption: Founder & Developer
+        description: |
+          - Built AI academic advising bot on Discord
+          - Automated personalized transfer pathways for UC/CSU
+          - PMI (Project Manager) serving 4,000+ members
+          - Integrated Mailchimp, Google Workspace, and AI tools
+
+      - layout: left
+        title: Global Education & Teaching
+        sub_title: Capital University of PE & Sports
+        caption: Assistant Manager, International Ed.
+        description: |
+          - Designed training for global students (95% satisfaction)
+          - Tracked outcomes with analytics tools
+          - ESL Instructor roles across LATTC, LSI, Easyke
+
+  - title: Projects
+    layout: list
     content:
       - layout: top-middle
-        title: Super awesome project
-        link: github.com/sproogen
-        # link_text: Project Website
-        additional_links:
-          - title:  sproogen/modern-resume-theme
-            icon: fab fa-github
-            url: github.com/sproogen/modern-resume-theme
-          # - title:  Github page for project (eg. sproogen/modern-resume-theme)
-          #   icon: fab fa-github
-          #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
-        quote: >
-          This is probably one of the greatest apps ever created, if you don't agree you're probably wrong.
-        description: | # this will include new lines to allow paragraphs
-          I started this project as a way if learning <mark>React</mark> and it has since grown into a fully fledged app. I have learned many skills through this and been I'm very proud of having this in my portfolio. If you don't have a project as awesome as this I would advise you make one.
+        title: TransferBot
+        sub_title: Academic AI Chatbot
+        description: |
+          Built for California community college students to navigate the transfer system using Discord AI.
+          - Automated transfer pathway recommendations
+          - Personalized academic advising
+          - Integrated with UC/CSU systems
 
-  - title: Experience # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        title: The Boring Company
-        link: boringcompany.com
-        # link_text: boringcompany.com
-        sub_title: Senior Network System Administrator
-        caption: November 2017 - Present
-        quote: >
-          Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
-        description: | # this will include new lines to allow paragraphs
-            Every company needs its networks properly administered and The Boring Compay is no exception. Digging holes is hard and I play my part making sure the whole company stays connected. I lead a team of 5 people and enjoy driving the company to try new technologies.
+      - layout: top-middle
+        title: Virtual Tutoring Hub
+        sub_title: Santa Monica College
+        description: |
+          Designed and launched an online platform for Santa Monica College tutors:
+          - Increased access to tutoring services
+          - Streamlined session booking
+          - Enhanced student-tutor communication
 
-  - title: Education # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        title: Harvard University
-        caption: 2010 - 2013
-        sub_title: BSc Computer Science
-        quote: >
-          Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
-        description: | # this will include new lines to allow paragraphs
-          During my time at Harvard I learnt most of my key skills that have I have taken through my career such as teamwork and working to tight deadlines. I thouroughly enjoyed my time as university and learnt a lot about a healthy work life balance.
+      - layout: top-middle
+        title: Credit Card Rewards App
+        description: |
+          Designed a consumer finance tool that compares rewards and perks:
+          - User-friendly interface
+          - Real-time comparison features
+          - Personalized recommendations
 
-          I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
-
-  - title: A Little More About Me
+  - title: Research & Development
     layout: text
-    content: | # this will include new lines to allow paragraphs
-      Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-      - Rock climbing
-      - Gaming
-      - Knitting
-      - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
+    content: |
+      ### Doctoral Research
+      - **Northeastern University** - Ed.D. Candidate
+      - Exploring equity-centered design in hybrid tutoring services
+      - Conducting action research with faculty and students
 
-      Look at this cool image  
-      ![Trees](/modern-resume-theme/images/landscape-trees.jpg "Trees")
+      ### Certifications
+      - PMP – Project Management Institute
+      - Google Project Management
+      - DEI Leadership – Rice University
+      - Business Analytics – Rice University
+
+      ### Professional Involvement
+      - Board Member – APIDA Steering Committee
+      - Contributing to campus DEI strategy and advocacy efforts
+
+  - title: Contact
+    layout: text
+    content: |
+      Interested in collaborating or hiring me? Let's connect!
+
+      [Download Resume](path/to/resume.pdf) | [LinkedIn](https://linkedin.com/in/jane-shi-m-a-pmp-46a418153) | [GitHub](https://github.com/Jane-MYS)
 
 # Footer
 footer_show_references: true

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane (Mengyi) Shi | Education Leader & Project Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #003135;
+      --fg: #AFDDE5;
+      --accent1: #0FA4AF;
+      --accent2: #024950;
+      --accent3: #964734;
+      --white: #fff;
+      --card-bg: #024950;
+      --card-fg: #AFDDE5;
+    }
+    html, body {
+      background: var(--bg);
+      color: var(--fg);
+      margin: 0;
+      padding: 0;
+      font-family: 'Marcellus', serif;
+      font-size: 18px;
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+    .navbar {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 2rem 0.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+    }
+    .nav-logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
+    }
+    .nav-links a:hover {
+      color: var(--accent1);
+      border-bottom: 2px solid var(--accent1);
+    }
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.2rem 1rem 0.5rem 1rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        margin-top: 0.7rem;
+      }
+    }
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1rem 3rem 1rem;
+    }
+    .hero-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent1);
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    }
+    .hero-name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.01em;
+    }
+    .hero-title {
+      font-size: 1.3rem;
+      color: var(--accent1);
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+    .hero-bio {
+      font-size: 1rem;
+      color: var(--fg);
+      margin-bottom: 0.7rem;
+      max-width: 700px;
+      min-width: 320px;
+      background: rgba(175,221,229,0.07);
+      border-left: 3px solid var(--accent1);
+      border-radius: 8px;
+      padding: 1.1rem 2rem;
+      display: inline-block;
+      margin-left: 0;
+    }
+    .hero-socials {
+      margin-top: 0.5rem;
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+    }
+    .hero-socials a, .contact-links a {
+      color: var(--accent1);
+      font-size: 1.7rem;
+      text-decoration: none;
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+    }
+    .hero-socials a:hover, .contact-links a:hover {
+      color: var(--accent3);
+    }
+    main {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem 3rem 1rem;
+    }
+    .section {
+      margin-bottom: 3.5rem;
+      animation: fadeInUp 0.8s;
+      opacity: 0;
+      transform: translateY(30px);
+      animation-fill-mode: forwards;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: none;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2rem;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+    .card-list, .project-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 700px) {
+      .project-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .card, .project-card, .research-content {
+      background: var(--card-bg);
+      color: var(--card-fg);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 0.5rem;
+      box-shadow: none;
+      font-family: 'Marcellus', serif;
+    }
+    .card-title, .project-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.2rem;
+    }
+    .card-subtitle, .project-subtitle {
+      font-size: 1.05rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .card-caption {
+      font-size: 1rem;
+      color: var(--accent3);
+      margin-bottom: 0.5rem;
+    }
+    .card-desc, .project-desc {
+      font-size: 1.08rem;
+      color: var(--fg);
+      margin-bottom: 0.2rem;
+    }
+    .research-content {
+      font-size: 1.08rem;
+      color: var(--fg);
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 0.5rem;
+      box-shadow: none;
+    }
+    .contact-content {
+      text-align: center;
+    }
+    .contact-form {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact-form input, .contact-form textarea {
+      background: #012326;
+      color: var(--fg);
+      border: 1px solid var(--accent2);
+      border-radius: 6px;
+      padding: 0.7rem;
+      font-size: 1rem;
+      resize: vertical;
+      font-family: 'Marcellus', serif;
+    }
+    .contact-form button {
+      background: var(--accent1);
+      color: var(--white);
+      border: none;
+      border-radius: 6px;
+      padding: 0.7rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: 'Marcellus', serif;
+    }
+    .contact-form button:hover {
+      background: var(--accent3);
+    }
+    @media (min-width: 800px) {
+      .hero {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        justify-content: center;
+      }
+      .hero-img {
+        margin-bottom: 0;
+        margin-right: 2.5rem;
+      }
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero-bio {
+        display: block;
+        max-width: 700px;
+        min-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a class="nav-logo" href="#about">Jane (Mengyi) Shi</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <section class="hero" id="about">
+    <img src="/images/profile.jpg" alt="Profile photo of Jane (Mengyi) Shi" class="hero-img">
+    <div class="hero-content">
+      <div class="hero-name">Jane (Mengyi) Shi</div>
+      <div class="hero-title">Education Leader & Project Manager</div>
+      <div class="hero-bio"><p>I’m an Ed.D. candidate at Northeastern University and a Program Coordinator at Santa Monica College, where I lead tutoring programs for over 35 student workers each semester.</p>
+
+<p>My work spans across educational leadership, EdTech implementation, and volunteer project management. I’ve developed virtual platforms for tutoring, founded TransferBot – an AI-powered chatbot for California transfer students – and created apps and sites to help people make smarter financial and educational decisions.</p>
+
+<p>I hold a PMP certification, and I’m passionate about optimizing workflows, mentoring student success, and expanding access to learning, both in person and online.</p>
+</div>
+      <div class="hero-socials">
+        <a href="mailto:mengyishi9@gmail.com" title="Email" target="_blank" rel="noopener">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 12 13 2 6"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/jane-shi-m-a-pmp-46a418153" title="LinkedIn" target="_blank" rel="noopener">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.1-.9-2-2-2s-2 .9-2 2v4.5h-3v-9h3v1.22c.41-.72 1.39-1.22 2.25-1.22 1.66 0 3 1.34 3 3v6z"/>
+          </svg>
+        </a>
+        <a href="https://github.com/Jane-MYS" title="GitHub" target="_blank" rel="noopener">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.029-2.686-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.699 1.028 1.593 1.028 2.686 0 3.847-2.338 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .268.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <main>
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+      <div class="section-title">Experience</div>
+      <div class="card-list">
+        
+        <div class="card">
+          <div class="card-title">Education Leadership</div>
+          <div class="card-subtitle">Santa Monica College</div>
+          <div class="card-caption">Program Coordinator</div>
+          <div class="card-desc"><ul>
+  <li>Scaled tutoring across all modern languages</li>
+  <li>Supervised 35+ tutors per term</li>
+  <li>Developed online learning platform with 2,000+ users</li>
+</ul>
+</div>
+        </div>
+        
+        <div class="card">
+          <div class="card-title">EdTech & Project Management</div>
+          <div class="card-subtitle">TransferBot</div>
+          <div class="card-caption">Founder & Developer</div>
+          <div class="card-desc"><ul>
+  <li>Built AI academic advising bot on Discord</li>
+  <li>Automated personalized transfer pathways for UC/CSU</li>
+  <li>PMI (Project Manager) serving 4,000+ members</li>
+  <li>Integrated Mailchimp, Google Workspace, and AI tools</li>
+</ul>
+</div>
+        </div>
+        
+        <div class="card">
+          <div class="card-title">Global Education & Teaching</div>
+          <div class="card-subtitle">Capital University of PE & Sports</div>
+          <div class="card-caption">Assistant Manager, International Ed.</div>
+          <div class="card-desc"><ul>
+  <li>Designed training for global students (95% satisfaction)</li>
+  <li>Tracked outcomes with analytics tools</li>
+  <li>ESL Instructor roles across LATTC, LSI, Easyke</li>
+</ul>
+</div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="section-title">Projects</div>
+      <div class="project-grid">
+        
+        <div class="project-card">
+          <div class="project-title">TransferBot</div>
+          
+          <div class="project-subtitle">Academic AI Chatbot</div>
+          
+          <div class="project-desc"><p>Built for California community college students to navigate the transfer system using Discord AI.</p>
+<ul>
+  <li>Automated transfer pathway recommendations</li>
+  <li>Personalized academic advising</li>
+  <li>Integrated with UC/CSU systems</li>
+</ul>
+</div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-title">Virtual Tutoring Hub</div>
+          
+          <div class="project-subtitle">Santa Monica College</div>
+          
+          <div class="project-desc"><p>Designed and launched an online platform for Santa Monica College tutors:</p>
+<ul>
+  <li>Increased access to tutoring services</li>
+  <li>Streamlined session booking</li>
+  <li>Enhanced student-tutor communication</li>
+</ul>
+</div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-title">Credit Card Rewards App</div>
+          
+          <div class="project-desc"><p>Designed a consumer finance tool that compares rewards and perks:</p>
+<ul>
+  <li>User-friendly interface</li>
+  <li>Real-time comparison features</li>
+  <li>Personalized recommendations</li>
+</ul>
+</div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- Research Section -->
+    <section class="section" id="research">
+      <div class="section-title">Research & Professional Development</div>
+      <div class="research-content">
+        <h3 id="doctoral-research">Doctoral Research</h3>
+<ul>
+  <li><strong>Northeastern University</strong> - Ed.D. Candidate</li>
+  <li>Exploring equity-centered design in hybrid tutoring services</li>
+  <li>Conducting action research with faculty and students</li>
+</ul>
+
+<h3 id="certifications">Certifications</h3>
+<ul>
+  <li>PMP – Project Management Institute</li>
+  <li>Google Project Management</li>
+  <li>DEI Leadership – Rice University</li>
+  <li>Business Analytics – Rice University</li>
+</ul>
+
+<h3 id="professional-involvement">Professional Involvement</h3>
+<ul>
+  <li>Board Member – APIDA Steering Committee</li>
+  <li>Contributing to campus DEI strategy and advocacy efforts</li>
+</ul>
+
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="section-title">Contact</div>
+      <div class="contact-content">
+        <div><p>Interested in collaborating or hiring me? Let’s connect!</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="path/to/resume.pdf">Download Resume</a></td>
+      <td><a href="https://linkedin.com/in/your-profile">LinkedIn</a></td>
+      <td><a href="https://github.com/jane-mys">GitHub</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+        <div class="contact-links" style="margin-top:1.2rem;">
+          <a href="mailto:mengyishi9@gmail.com" title="Email" target="_blank" rel="noopener">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 12 13 2 6"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/jane-shi-m-a-pmp-46a418153" title="LinkedIn" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.1-.9-2-2-2s-2 .9-2 2v4.5h-3v-9h3v1.22c.41-.72 1.39-1.22 2.25-1.22 1.66 0 3 1.34 3 3v6z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/Jane-MYS" title="GitHub" target="_blank" rel="noopener">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.029-2.686-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.699 1.028 1.593 1.028 2.686 0 3.847-2.338 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .268.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
+          </a>
+        </div>
+        <form class="contact-form" name="contact" method="POST" data-netlify="true">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Fade-in animation on scroll
+    function revealSections() {
+      document.querySelectorAll('.section').forEach(function(sec) {
+        var rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 60) {
+          sec.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealSections);
+    window.addEventListener('DOMContentLoaded', revealSections);
+  </script>
+</body>
+</html> 
